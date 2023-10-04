@@ -27,7 +27,7 @@ const EditBook = () => {
     .catch((error) => {
       setLoading(false);
       alert('An error happened. Please check console');
-      console.log(error)
+      // console.log(error)
     });
   }, []);
 
@@ -49,7 +49,7 @@ const EditBook = () => {
       setLoading(false);
       // alert('An error happened. Please check console');
       enqueueSnackbar('Error',{variant:'error'});
-      console.log(error)
+      // console.log(error)
     });
   }
 

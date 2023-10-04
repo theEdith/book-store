@@ -13,10 +13,10 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     setLoading(true);
-    console.log('heyyy')
+    // console.log('heyyy')
     axios.delete(`https://book-store-rust-six.vercel.app/books/${id}`)
       .then(() => {
-        console.log('heyyy2')
+        // console.log('heyyy2')
         setLoading(false);
         enqueueSnackbar("Book Deleted Successfully", {variant: 'success'})
         navigate('/');
@@ -25,7 +25,7 @@ const DeleteBook = () => {
         setLoading(false);
         // alert('An error happened. Please check console');
         enqueueSnackbar('Error',{variant:'error'});
-        console.log(error)
+        // console.log(error)
       });
   }
   return (
