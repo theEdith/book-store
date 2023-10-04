@@ -16,7 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:8000/books/${id}`)
+    axios.get(`https://book-store-rust-six.vercel.app/books/${id}`)
     .then((response) => {
       console.log(response)
       setAuthor(response.data.author);
@@ -39,7 +39,7 @@ const EditBook = () => {
     };
     setLoading(true);
 
-    axios.patch(`http://localhost:8000/books/${id}`, data)
+    axios.patch(`https://book-store-rust-six.vercel.app/books/${id}`, data)
     .then(() => {
       setLoading(false);
       enqueueSnackbar("Book Edited Successfully", {variant: 'success'})
