@@ -18,7 +18,7 @@ const EditBook = () => {
     setLoading(true);
     axios.get(`https://book-store-rust-six.vercel.app/books/${id}`)
     .then((response) => {
-      console.log(response)
+      // console.log(response)
       setAuthor(response.data.author);
       setPublishYear(response.data.publishYear);
       setTitle(response.data.title);

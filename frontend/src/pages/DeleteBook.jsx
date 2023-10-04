@@ -13,10 +13,8 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     setLoading(true);
-    // console.log('heyyy')
     axios.delete(`https://book-store-rust-six.vercel.app/books/${id}`)
       .then(() => {
-        // console.log('heyyy2')
         setLoading(false);
         enqueueSnackbar("Book Deleted Successfully", {variant: 'success'})
         navigate('/');
